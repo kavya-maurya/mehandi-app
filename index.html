@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <Style>
+        nav{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: #8f1b4c;
+    padding: 10px;
+    position: static;
+    
+   
+    
+}
+a:hover{
+    color: #fac2d9;
+    text-shadow: 0 0 5px #e391bbee, 0 0 10px #9a3c5ed3, 0 0 15px #d378a1eb;
+    transition: all 0.3s ease-in-out;
+}
+ 
+
+a{
+    color:aliceblue;
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ 
+ #first{
+    height:550px;
+    width:99.7%;
+    border:3px solid rgb(186, 74, 104);
+    background-image :url('download (7).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* to lower background image only opacity use */
+   
+
+    
+}
+
+
+
+#second{
+     height:750px;
+    width:99.7%;
+    border:3px solid rgb(147, 7, 24)
+
+}
+
+.title{
+    text-align: center;
+    padding-top: 30px;
+    color:rgb(97, 15, 48);
+    font-size:x-large;
+    
+
+}
+#simple{
+    background-image: url('download (3).jpg');
+    size:cover;
+    height: 490px;
+    width:30%;
+    display:inline-block;
+    margin: 22px;
+    text-align:left;
+ border:#430a2239 solid 3px;
+    box-shadow: #88596d3c 0px 0px 10px, #7044574f 0px 0px 20px, #774a5c2b 0px 0px 30px;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  color:rgb(97, 15, 48);
+
+}
+
+#second a{
+    text-align: end;
+    color: #88596d3c;
+}
+ #simple a:hover{
+    color: #660c3029;
+    text-shadow: 0 0 5px #6b0c2f3a, 0 0 10px #690c2b48, 0 0 15px #711c2f43;
+    transition: all 0.3s ease-in-out;
+
+ }
+#arabic a:hover{
+    color: #660c3036;
+    text-shadow: 0 0 5px #6b0c2f3a, 0 0 10px #690c2b48, 0 0 15px #711c2f43;
+    transition: all 0.3s ease-in-out;
+
+ }
+#bridal a:hover{
+    color: #660c30b3;
+    text-shadow: 0 0 5px #6b0c2f3a, 0 0 10px #690c2b48, 0 0 15px #711c2f43;
+    transition: all 0.3s ease-in-out;
+
+ }
+
+#arabic{
+    background-image: url('download (4).jpg');
+    size:cover;
+    height: 490px;
+    width:30%;
+    display:inline-block;
+    margin: 22px;
+    text-align: left;
+     border:#430a2239 solid 3px;
+    box-shadow: #88596d3c 0px 0px 10px, #7044574f 0px 0px 20px, #774a5c2b 0px 0px 30px;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  color:rgb(97, 15, 48);
+
+}
+#bridal{
+    background-image: url('download (6).jpg');
+    size:cover;
+    height: 490px;
+    width:30%;
+    display:inline-block;
+    margin: 22px;
+    text-align:left;
+    border:#430a2239 solid 3px;
+    box-shadow: #88596d3c 0px 0px 10px, #7044574f 0px 0px 20px, #774a5c2b 0px 0px 30px;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(97, 15, 48);
+}
+
+.cursive{
+  
+    text-align: center;
+    color:rgb(97, 15, 48);
+    font-size: 40px;
+ font-family: 'Great Vibes', cursive;
+    
+}
+
+h2{
+    border-left: rgb(255, 109, 211) solid 5px;
+    padding-left: 2px;
+    margin:3px;
+  color:rgb(97, 15, 48);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#third div{
+    display: inline-block;
+}
+
+#design{
+    height: 400px;
+    width: 400px;
+    border:3px solid rgb(147, 7, 24);
+    margin-left: 20px;
+}
+
+#head3{
+    color:rgb(97, 15, 48);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    text-align:start;
+}
+</Style>
+</head>
+<body onload="clickSimple()">
+       <nav>
+        <a href="index.html">Home</a>
+        <a href="login2.html">Login</a>
+        <a href="registration.html">Register</a>
+    </nav>
+       
+    <div id="first">
+        <div class="title">
+<h1 id="im">MEHANDI DESIGNS
+        </h1>
+        <h2>Design. Discover. Express.</h2>
+<p>Inspired by tradition, designed for elegance</p>
+   </div>
+
+
+
+    </div>
+
+    <div id="second">
+            <h2 >select your design </h2>
+
+    <div id="simple" onclick="clickSimple()">
+        <h2>Simple</h2>
+        <a>click here</a>
+    </div>
+     <div id="arabic" onclick="">
+        <h2>Arabic</h2>
+        <a>click here</a>
+    </div>
+     <div id="bridal" onclick="">
+        <h2>Bridal-hand</h2>
+        <a>click here</a>
+    </div>
+
+    <h1 class="cursive">From simple elegance to bridal masterpieces.</h1>
+    <h1 class="title">
+Find your perfect design.</h1>
+    </div>
+
+
+
+
+    <div id="third">
+
+        
+            <h2 id="head3">select your design -></h2>
+      
+
+        <div>
+            <img id="design" src="hands.jpg" alt="">
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+    
+
+ function clickSimple(){
+   const new1 = array.forEach(element => { id  
+    
+   });
+            
+        const idData={
+
+        };
+
+        console.log(idData);
+
+        fetch('https://app-api-3-u6sh.onrender.com/api/categories',{
+            method:'post',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(idData)
+        }).then(response=>response.json())
+        .then(data=>{
+            console.log(data);
+        }).catch(err=>{
+            console.error('Error:', err);
+        })
+                //to redirect to askai page after registration
+		setTimeout(function(){
+			window.location.href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNelJDYPs2ECl4IoJkS1Leu9Z6-LHF-E0opw&s";		
+		}
+
+		,2000);
+        } 
+
+</script>
+</html>

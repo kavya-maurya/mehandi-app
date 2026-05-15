@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <style>
+    body{
+       background-image: url('brown.jpg');
+        margin:4px;
+        padding:5px;
+
+    }
+
+    h1{
+        color:rgb(187, 79, 140);
+        margin-bottom:30px;
+       font-size: 39px;
+       text-align: center;
+    }
+
+       input[type="email"], input[type="text"], input[type="password"]{
+            width: 300px;
+            height: 30px;
+           
+            padding: 5px;
+            border: 1px solid #7c2745;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]{
+            width: 310px;
+            height: 35px;
+            margin: 10px;
+            padding: 5px;
+            background-color: #5c2033;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        label{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color:#370220;
+        }
+
+        #login{
+            display:inline-block;
+            position: absolute;
+            top: 20%;
+            left:65%;
+            box-shadow: 0 4px 8px rgba(157, 29, 99, 0.557);
+            align-items: center;
+            height: 450px;
+            width: 350px;
+           padding-left: 15px;
+           border-radius: 5px;
+           
+
+        }
+
+ #img{ 
+    display: inline-block;
+    position:absolute;
+    top: 16%;
+    left: 10%;
+    background-image: url('mehandi.png');
+    height: 580px;
+    width:500px;
+    color:rgb(6, 4, 2);
+ border-radius: 900px;
+ text-align: center;
+}
+#img h2{
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    opacity: 0.9;
+    position: absolute;
+    top: 39%;
+    left: 13%;
+
+}
+#img p{
+    font-size: 22px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    opacity: 0.9;
+    position: absolute;
+    top: 48%;
+    left: 9%;
+    color:rgb(130, 40, 73)
+}
+
+
+#im{
+   position: absolute;
+   top: 13%;
+   left: 13%;
+    color:rgb(121, 11, 46);
+   
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: #a7276b;
+    padding: 10px;
+    position: static;
+    
+}
+h5{
+    color:rgb(130, 40, 73);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+a{
+    color: rgb(227, 210, 221);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    
+}
+
+/* to transform shadow and hover effect */
+a:hover{
+    color: #ff078f;
+    text-shadow: 0 0 5px #4a02246e, 0 0 10px #5c052d65, 0 0 15px #56062e41;
+    transition: all 0.3s ease-in-out;
+}
+
+/* on login button hover */
+input[type="submit"]:hover{
+    background-color: #ff078b;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 7, 119, 0.418);
+    transition: all 0.3s ease-in-out;
+}
+input[type="email"]:hover{
+    background-color: #b80559;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 7, 106, 0.361);
+    transition: all 0.3s ease-in-out;
+}input[type="text"]:hover{
+    background-color: #b80559;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 7, 106, 0.361);
+    transition: all 0.3s ease-in-out;
+}
+input[type="password"]:hover{
+    background-color: #9e104b;
+    color: white;
+    box-shadow: 0 4px 8px rgba(202, 20, 87, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+   </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="loginn.html">Login</a>
+        <a href="registeration.html">Register</a>
+    </nav>
+       
+    <div id="img">
+        <h1 id="im">MEHANDI
+            DESIGNS
+        </h1>
+        <h2>Design. Discover. Express.</h2>
+<p>Inspired by tradition, designed for elegance</p>
+    </div>
+   
+    <div id="login">
+         <h1>REGISTER</h1>
+<input type="text" id="name" placeholder="full name                                                            👤" ></input>
+<br>
+<br>
+      
+        <input type="email" placeholder="email                                                                  📧" id="email"></input>
+
+<br>
+<br>
+       
+
+                <input type="password" placeholder="password                                                           🔒" id="password"></input>
+        <br>        
+<br>
+			<input type="text"id="pn" placeholder="phone number                                                    📞" ></input>
+
+<br>
+<br>
+
+        <input type="submit" value="register" onclick="submit()">
+        <a href="login2.html"><h5>already a user?</h5></a>
+
+    </div>
+</body>
+
+<script>
+
+        
+		
+		function submit(){
+			const name=document.getElementById('name').value;
+		const email=document.getElementById('email').value;
+		const password=document.getElementById('password').value;
+		const pn=document.getElementById('pn').value;
+			 
+			const user={
+				name: name,
+    mobile: pn,
+    email: email,
+    password: password
+			}
+console.log(user);
+			fetch('https://wallmagin-1.onrender.com/auth/register',{
+				method:'POST',
+				headers:{
+					'Content-Type':'application/json'
+				},
+				body:JSON.stringify(user)
+			}).then(response=>response.json)
+        .then(data=>{
+            console.log(data);
+             alert("your form has been submitted");
+        }).catch(err=>{
+            console.error('Error:', err);
+        })
+		
+	//to redirect to askai page after registration
+		setTimeout(function(){
+			window.location.href = "index.html";		
+		}
+
+		,2000);
+	}
+	
+		
+
+    </script>
+
+
+</html>
