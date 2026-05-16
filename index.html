@@ -54,6 +54,14 @@ a{
 
 }
 
+
+#fourth{
+     
+    width:99.7%;
+    border:solid rgb(147, 7, 24);
+    border-width:3px 0px 0px 0px;
+    
+}
 .title{
     text-align: center;
     padding-top: 30px;
@@ -62,7 +70,16 @@ a{
     
 
 }
-#simple{
+.contact{
+    text-align: center;
+    padding-top: 30px;
+    color:rgb(97, 15, 48);
+    font-size:x-large;
+    border:none;
+    
+
+}
+#festival{
     background-image: url('download (3).jpg');
     size:cover;
     height: 490px;
@@ -82,7 +99,7 @@ a{
     text-align: end;
     color: #88596d3c;
 }
- #simple a:hover{
+ #festival a:hover{
     color: #660c3029;
     text-shadow: 0 0 5px #6b0c2f3a, 0 0 10px #690c2b48, 0 0 15px #711c2f43;
     transition: all 0.3s ease-in-out;
@@ -157,6 +174,7 @@ h2{
     width: 400px;
     border:3px solid rgb(147, 7, 24);
     margin-left: 20px;
+    display: inline-block;
 }
 
 #head3{
@@ -165,13 +183,45 @@ h2{
     margin-left: 20px;
     text-align:start;
 }
+
+ #navsearch{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+  /* size of box */
+    width: 400px;
+     
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    }
+    #favnav{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+     
+    position: absolute;
+   right: 10px;
+    top: 15px;
+    }
+
+   #third p{
+    color:rgb(97, 15, 48);
+    font-family:cursive; 
+    font-size: larger;
+    text-align: left;}
 </Style>
 </head>
 <body onload="clickSimple()">
        <nav>
-        <a href="index.html">Home</a>
+        <input id="navsearch" type="search" placeholder="🔍︎Search Mehndi Designs, categories, artists..............">
+      
+         <a href="index.html">Home</a>
         <a href="login2.html">Login</a>
         <a href="registration.html">Register</a>
+
+          <a id="favnav" href="favourite.html">favourite<img src="fav.png" alt="" width="25px"></a>
+        
     </nav>
        
     <div id="first">
@@ -187,10 +237,10 @@ h2{
     </div>
 
     <div id="second">
-            <h2 >select your design </h2>
+            <h2 >Categories </h2>
 
-    <div id="simple" onclick="clickSimple()">
-        <h2>Simple</h2>
+    <div id="festival" onclick="clickFestival()">
+        <h2>Festival</h2>
         <a>click here</a>
     </div>
      <div id="arabic" onclick="">
@@ -212,34 +262,40 @@ Find your perfect design.</h1>
 
     <div id="third">
 
-        
-            <h2 id="head3">select your design -></h2>
-      
-
+            <h2 id="head3">Guide</h2>
         <div>
             <img id="design" src="hands.jpg" alt="">
-
+            <p class="cursive">Discover the art of mehndi with our comprehensive guide. 
+                From traditional to contemporary designs, learn how to create stunning patterns for every occasion. Whether you're a beginner or an experienced artist, our step-by-step tutorials and tips will help you master the craft and express your creativity through beautiful mehndi designs.</p>    
+      
         </div>
 
     </div>
+
+    <div id="fourth">
+        <h2 class="contact">Contact Us</h2>
+        <p class="cursive">We'd love to hear from you!   </div>
 </body>
 
 <script>
     
 
- function clickSimple(){
+ function clickFestival(){
    const new1 = array.forEach(element => { id  
     
    });
             
         const idData={
+            id: "69e4c5cc3a489d28448b7e4f",
+
 
         };
 
         console.log(idData);
 
-        fetch('https://app-api-3-u6sh.onrender.com/api/categories',{
-            method:'post',
+        fetch('https://app-api-3-u6sh.onrender.com/api/categories/69e4c5cc3a489d28448b7e4f',{
+            method:"GET",
+            
             headers:{
                 'Content-Type':'application/json'
             },
@@ -250,12 +306,9 @@ Find your perfect design.</h1>
         }).catch(err=>{
             console.error('Error:', err);
         })
-                //to redirect to askai page after registration
-		setTimeout(function(){
-			window.location.href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNelJDYPs2ECl4IoJkS1Leu9Z6-LHF-E0opw&s";		
-		}
+               
 
-		,2000);
+	
         } 
 
 </script>
