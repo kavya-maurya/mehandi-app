@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            margin:0;
+            padding:20px;
+        }
+
+        
+
+        .card{
+            width:340px;
+            height:330px;
+            border:1px solid black;
+            margin: 9px;
+            display: inline-block;
+            
+        }
+
+        .card img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        
+    #favnav{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+     
+    position: absolute;
+   right: 10px;
+    top: 15px;
+    }
+      nav{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: #8f1b4c;
+    padding: 10px;
+    position: static;
+    
+   
+    
+}
+a:hover{
+    color: #fac2d9;
+    text-shadow: 0 0 5px #e391bbee, 0 0 10px #9a3c5ed3, 0 0 15px #d378a1eb;
+    transition: all 0.3s ease-in-out;
+}
+ 
+
+a{
+    color:aliceblue;
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+    h1{
+    text-align: center;
+    color:#910d44;
+
+}
+
+
+    
+
+    </style>
+</head>
+<body onload="clickimg()">
+     <nav>
+       
+         <a href="index.html">Home</a>
+        <a href="login2.html">Login</a>
+        <a href="registration.html">Register</a>
+
+          <a id="favnav" href="favourite.html">favourite<img src="fav.png" alt="" width="25px"></a>
+        
+    </nav>
+    <h1>MEHANDI DESIGN</h1>
+</body>
+<script>
+    function clickimg(){
+
+   
+
+    fetch('https://mehndi-api.trendoradigital.com/api/images', {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        data.forEach(element => {
+             const newdiv = document.createElement('div');
+                newdiv.innerHTML = `<img src="${element.imageUrl}"> `;
+newdiv.classList.add('card');
+
+    document.body.appendChild(newdiv);
+             
+            
+        });
+     
+
+       
+
+    })
+    .catch(err => {
+        console.error('Error:', err);
+    });
+
+}
+
+</script>
+</html>

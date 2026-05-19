@@ -166,6 +166,7 @@ h2{
 }
 
 #third div{
+    
     display: inline-block;
 }
 
@@ -207,9 +208,9 @@ h2{
 
    #third p{
     color:rgb(97, 15, 48);
-    font-family:cursive; 
+    
     font-size: larger;
-    text-align: left;}
+    }
 </Style>
 </head>
 <body onload="clickSimple()">
@@ -237,19 +238,22 @@ h2{
     </div>
 
     <div id="second">
-            <h2 >Categories </h2>
-
-    <div id="festival" onclick="clickFestival()">
+        <div>
+            <h2 style="display: inline-block; ">Categories </h2> <a href="categories.html" style="color: #8f1b4c; font-size: small;">click here</a>
+</div>
+   <div id="festival">
+     
         <h2>Festival</h2>
-        <a>click here</a>
+       
+    
     </div>
-     <div id="arabic" onclick="">
+     <div id="arabic" >
         <h2>Arabic</h2>
-        <a>click here</a>
+       
     </div>
-     <div id="bridal" onclick="">
+     <div id="bridal">
         <h2>Bridal-hand</h2>
-        <a>click here</a>
+       
     </div>
 
     <h1 class="cursive">From simple elegance to bridal masterpieces.</h1>
@@ -260,13 +264,14 @@ Find your perfect design.</h1>
 
 
 
-    <div id="third">
+    <div id="third" >
 
             <h2 id="head3">Guide</h2>
         <div>
-            <img id="design" src="hands.jpg" alt="">
-            <p class="cursive">Discover the art of mehndi with our comprehensive guide. 
-                From traditional to contemporary designs, learn how to create stunning patterns for every occasion. Whether you're a beginner or an experienced artist, our step-by-step tutorials and tips will help you master the craft and express your creativity through beautiful mehndi designs.</p>    
+            <img id="design" src="hands.jpg" alt="" style="float: left;" >
+            <p style="font-size:xx-large; align-items: right; margin:89px;
+    padding:10px; !important" class="cursive">Discover the art of mehndi with our comprehensive guide. <br>
+                From traditional to contemporary designs, learn how to create stunning patterns for every occasion. <br>Whether you're a beginner or an experienced artist, our step-by-step tutorials and tips will help you master the craft and express your creativity through beautiful mehndi designs.</p>    
       
         </div>
 
@@ -277,39 +282,8 @@ Find your perfect design.</h1>
         <p class="cursive">We'd love to hear from you!   </div>
 </body>
 
-<script>
+
     
 
- function clickFestival(){
-   const new1 = array.forEach(element => { id  
-    
-   });
-            
-        const idData={
-            id: "69e4c5cc3a489d28448b7e4f",
-
-
-        };
-
-        console.log(idData);
-
-        fetch('https://app-api-3-u6sh.onrender.com/api/categories/69e4c5cc3a489d28448b7e4f',{
-            method:"GET",
-            
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(idData)
-        }).then(response=>response.json())
-        .then(data=>{
-            console.log(data);
-        }).catch(err=>{
-            console.error('Error:', err);
-        })
-               
-
-	
-        } 
-
-</script>
+ 
 </html>

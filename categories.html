@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+div{
+   
+    float: left;
+    gap: 20px;
+    margin: 20px;
+    padding:12px;
+   align-items: center;
+   
+
+}
+h2{
+    text-align:start;
+    border-left: 5px solid #ff539b;
+    padding-left: 5px;
+    color: #d86e9a;
+    font-size: xx-large;
+    margin-bottom: 2px;
+}
+
+h1{
+    text-align: center;
+    color:#910d44;
+
+}
+
+div img{
+    height: inherit;
+    width: 500px;
+    margin: 20px;
+    align-items: center;
+    border-radius: 15px;
+    object-fit:cover;
+    border: 2px solid #ef7ead;
+}
+
+button{
+    
+    margin: 20px;
+    width: 200px;
+    background-color: #eb8fb56d;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+}
+button a{
+    text-decoration: none;
+    color: #bb195c;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#navsearch{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+  /* size of box */
+    width: 400px;
+     
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    }
+    #favnav{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+     
+    position: absolute;
+   right: 10px;
+    top: 15px;
+    }
+      nav{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: #8f1b4c;
+    padding: 10px;
+    position: static;
+    
+   
+    
+}
+a:hover{
+    color: #fac2d9;
+    text-shadow: 0 0 5px #e391bbee, 0 0 10px #9a3c5ed3, 0 0 15px #d378a1eb;
+    transition: all 0.3s ease-in-out;
+}
+ 
+
+a{
+    color:aliceblue;
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+    </style>
+
+    
+</head>
+ 
+<body onload="clickFestival()" >
+    <nav>
+        <input id="navsearch" type="search" placeholder="🔍︎Search Mehndi Designs, categories, artists..............">
+      
+         <a href="index.html">Home</a>
+        <a href="login2.html">Login</a>
+        <a href="registration.html">Register</a>
+
+          <a id="favnav" href="favourite.html">favourite<img src="fav.png" alt="" width="25px"></a>
+        
+    </nav>
+    
+        <h1 >CATEGORIES</h1>
+       <button style="float: inline-start;"><a href="images.html">click to see ALL DESIGN</a></button>
+       <br>
+       <br>
+       
+    
+</body>
+<script>
+function clickFestival(){
+
+   
+
+    fetch('https://mehndi-api.trendoradigital.com/api/categories', {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        data.forEach(element => {
+             const newdiv = document.createElement('div');
+                newdiv.innerHTML = `<h2>${element.name}</h2><img src="${element.image}" alt="${element.name}">`;
+
+
+    document.body.appendChild(newdiv);
+             
+            
+        });
+        console.log(data.name);
+
+       
+
+    })
+    .catch(err => {
+        console.error('Error:', err);
+    });
+
+}
+
+</script>
+</html>
