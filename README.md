@@ -4,7 +4,7 @@ Mehndi Designs Website 🌸
 A modern frontend web application for exploring beautiful Mehndi designs through dynamic API integration.
 This project showcases categories, image galleries, responsive layouts, and elegant UI styling inspired by traditional Mehndi artistry.
 ------------------------------------------------------------
-watch demo video : https://lnkd.in/g9-DZncy
+watch demo video : https://youtu.be/c5tC7opO3Hw?si=LJV7Ujm6fWLx9HaO
 ----------------------------------------------
 ✨ Features
 
